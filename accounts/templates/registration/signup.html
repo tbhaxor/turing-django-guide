@@ -1,0 +1,12 @@
+<!-- accounts/templates/registration/signup.html -->
+<html>
+    <title>Signup</title>
+
+    <body>
+        <form method="post">
+            {%csrf_token%}
+            {{ form.as_p }}
+            <button type="submit">Signup</button>
+        </form>
+    </body>
+</html>

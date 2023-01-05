@@ -1,0 +1,11 @@
+<!-- task/templates/edit_task.html -->
+<html>
+    <title>Edit Task</title>
+    <body>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Edit Task</button>
+        </form>
+    </body>
+</html>

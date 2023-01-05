@@ -1,0 +1,12 @@
+<!-- task/templates/delete_task.html -->
+<html>
+    <title>Delete {{ object.name }}</title>
+
+    <body>
+        <form method="post">
+            {% csrf_token %}
+            <p>Are you sure to delete "<strong>{{ object.name }}</strong>" task?</p>
+            <button type="submit">Yes</button>
+        </form>
+    </body>
+</html>

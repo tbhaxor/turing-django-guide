@@ -1,0 +1,17 @@
+<html>
+    <title>
+        Hello World!
+    </title>
+
+    <body>
+        {% if name %}
+        <p>
+            Hello, <strong>{{ name }}</strong>! I am a django application.
+        </p>
+        {% else %}
+        <p>
+            Hello, <strong>Guest</strong>! Please use the <kbd>name</kbd> query to get personalised response.
+        </p>
+        {% endif %}
+    </body>
+</html>

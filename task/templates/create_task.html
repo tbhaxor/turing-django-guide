@@ -1,0 +1,11 @@
+<!-- task/templates/create_task.html -->
+<html>
+    <title>Create Task</title>
+    <body>
+        <form action="{% url 'task:new' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Create Task</button>
+        </form>
+    </body>
+</html>

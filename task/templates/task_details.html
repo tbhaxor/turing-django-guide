@@ -1,0 +1,12 @@
+<!-- task/templates/task_details.html -->
+<html>
+    <title>{{ object.name }}</title>
+    <body>
+        <p><strong>Name: </strong>{{ object.name }}</p>
+        <p><strong>Description: </strong>{{ object.description }}</p>
+        <p><strong>Created At: </strong>{{ object.created_at }}</p>
+        <p><strong>Updated At: </strong>{{ object.updated_at }}</p>
+        
+        <a href="{% url 'task:delete' task_id=object.pk %}">Delete</a>
+    </body>
+</html>

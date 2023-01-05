@@ -1,0 +1,39 @@
+<!-- task/templates/list_tasks.html -->
+<html lang="en">
+    <title>List all Tasks</title>
+    <body>
+        <a href="{% url 'task:new' %}">Create Task</a>
+        <table border>
+            <thead>
+                <tr>
+                    <th>Name</td>
+                    <th>Description</td>
+                    <th>Created At</td>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in object_list %}
+                    <tr>
+                        <td>
+                            {{ task.name }}
+                        </td>
+                        <td>
+                            {{ task.description | truncatewords:7 }}
+                        </td>
+                        <td>
+                            {{ task.created_at }}
+                        </td>
+                        <td>
+                            <a href="{% url 'task:edit' task_id=task.pk %}">Edit</a>
+                            &nbsp;
+                            |
+                            &nbsp;
+                            <a href="{% url 'task:details' task_id=task.pk %}">Details</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
